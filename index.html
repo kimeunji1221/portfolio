@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio web</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div id="header">
+        <!-- nav -->
+        <div id="nav">
+            <div class="nav_in">
+                <div class="logo">
+                    <img src="" alt="" />
+                </div>
+                <ul class="name">
+                    <li>Home</li>
+                    <li>About Me</li>
+                    <li>My Skill</li>
+                    <li>My Project</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+        </div>
+        <!-- main -->
+        <div id="main">
+            <div class="main_in">
+                <h2>portfolio</h2>
+                <p>frontend developer & designer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <div id="info">
+        <!-- intro -->
+        <div id="intro">
+            <div class="intro_in">
+                <ul class="word">
+                    <li>
+                        <h3>Don't dream it,<br>Be it!</h3>
+                        <p>생각으로 그치지말고 행동하라!</p>
+                    </li>
+                    <li>
+                        <h3>Hello-<br>I'm kim eun ji.</h3>
+                        <p>도전하며 나아가는 신입 개발자, 김은지입니다.</p>
+                    </li>
+                </ul>
+                <div class="img"></div>
+            </div>
+        </div>
+        <!-- skill -->
+        <script>
+            $(document).ready(function(){
+               var scene01Num = 1;
+
+               $(window).scroll(function(){
+                   var scrollTop = $(document).scrollTop();
+                   if(scrollTop > 2000 && scene01Num == 1) {
+                       scene01Num = 0;
+                       $('#skill .in_box01').stop().delay(0).css({left:'300px'}).animate({left:'150px'},1000);
+                       $('#skill .in_box02').stop().delay(500).css({left:'300px'}).animate({left:'30px'},1000);
+                       $('#skill .in_box03').stop().delay(1000).css({left:'300px'}).animate({left:'120px'},1000);
+                       $('#skill .in_box04').stop().delay(1500).css({left:'300px'}).animate({left:'100px'},1000);
+                   }
+                   else if(scrollTop < 2000 && scene01Num == 0){
+                       scene01Num = 1;
+                       $('#skill .in_box01').stop().css({left:'150px'}).animate({left:'300px'},1000);
+                       $('#skill .in_box02').stop().css({left:'30px'}).animate({left:'300px'},1000); 
+                       $('#skill .in_box03').stop().css({left:'120px'}).animate({left:'300px'},1000);
+                       $('#skill .in_box04').stop().css({left:'100px'}).animate({left:'300px'},1000);
+
+                   }
+               });
+            });
+        </script>
+        <div id="skill">
+            <div class="skill_in">
+                <ul class="skill_box">
+                    <li>
+                        <h5>Html</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Css</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>J Query</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Node.js</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>React</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="skill_box">
+                    <li>
+                        <h5>Photoshop</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Illustrator</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Word</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Power Point</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>none</h5>
+                        <div>
+                            <div class="in_box in_box01"></div>
+                        </div>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+    </div>
+        <!-- txt 글 숨김 -->
+        <!-- <div id="txt">
+            <div class="txt_in">
+                <div class="txt_m">
+                    <span>"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"</span>
+                    <p> 디자이너로 시작했으나, 사용하는 <b>웹페이지의 작동에 대한 호기심으로</b> 코딩을 배우게 되었습니다.<br>
+                        배움에는 끝이 없다는 명언이 있듯이 프론트엔드 분야에서는 비록 첫 발자국을 내딛은 단계이지만<br>
+                        배움에 대한 호기심과 열정을 가지고 앞으로 나아가고 있는 저는<br>
+                        <b>프론트엔드 신입 개발자, 김은지</b>입니다.
+                    </p>
+                </div>
+                <div class="txt_button">
+                    <div>About Me&nbsp&#8594;</div>
+                </div>
+            </div>
+        </div> -->
+    <!-- ---------------------------------------------- -->
+
+    <div id="contents">
+        <div id="web">
+            <div class="web_header">
+                <h2>web project</h2>
+            </div>
+            <div class="web_in">
+                <div class="web_con">
+                    <div class="web_txt">
+                        <h4>Clone Coding</h4>
+                        <p>
+                            스크롤메뉴, 슬라이드 동작 등의 기능을 J Query 등<br>
+                            기능을 이용하여 기존의 사이트와<br>
+                            동일한 형태로 작업한 클론코딩 작업물입니다.
+                        </p>
+                        <ul>
+                            <li>총 소요시간 : 7일</li>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>j query</li>
+                        </ul>
+                    </div>
+                    <div class="web_img"></div>
+                </div>
+            </div>
+            <div class="slide"></div>
+        </div>
+        <div id="design">
+            <div class="design_header">
+                <h4>design</h4>
+            </div>
+            <div class="design_in"></div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------- -->
+
+    <div id="footer">
+        <div id="footer_in">
+            <form id="form">
+                <div class="field">
+                  <label for="from_name">Name</label>
+                  <input type="text" name="from_name" id="from_name">
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <input type="text" name="message" id="message">
+                </div>
+                <div class="field">
+                    <label for="tel">Tel</label>
+                    <input type="text" name="tel" id="tel">
+                </div>
+                <input type="submit" id="f_button" value="Send Email" >
+              </form>
+    
+              <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+          
+              <script type="text/javascript">
+                emailjs.init('_pGv-ccxvIOloBa86')
+    
+                const btn = document.getElementById('button');
+    
+                document.getElementById('form')
+                .addEventListener('submit', function(event) {
+                    event.preventDefault();
+    
+                    btn.value = 'Sending...';
+    
+                    const serviceID = 'service_7yz1529';
+                    const templateID = 'template_wvzyfd8';
+    
+                    emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        alert('메일보내기 성공');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    });
+                });
+              </script>
+        </div>
+    </div>
+</body>
+</html>

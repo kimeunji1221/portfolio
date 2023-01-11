@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     background-color: #000;
+    z-index: 9999;
 }
 #menu_in {
     width: 1400px;
